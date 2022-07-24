@@ -35,3 +35,6 @@ Most of the infrastructure will be destroyed, apart from the s3 bucket (will be 
 If terraform apply does not work the first time or completes with an error, please re-run the terraform apply command, this will fix the issue. 
 
 
+6. Improvements 
+There is a lot of room for improvement in the architecture. Given the resources, RDS can be deployed for database high availability. Route 53 can be configured for high availability. If extra control is required EC2 instance of choice can be deployed to host the frontend of the app. Lot of other architectures can be designed depending on the requirements and nature of the app.
+ 
