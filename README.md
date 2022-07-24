@@ -12,7 +12,11 @@ Once the clone is complete, type terraform init to initialize the code. Once ter
 After the deployment is complete, please open zbucket.tf file and uncomment the code section at the bottom and please repeat the above steps. This is to provision the terraform.tfstate file on the S3 bucket, I couldn’t find a better way of provisioning tfstate file to S3. The code will still execute successfully without uncommenting the zbucket code block, but the if there is a need to store .tfstate files in a remote location for security purposes, please consider executing the code.  
 Please refer to the architecture to see what infrastructure is being provisioned. 
 
-3.  Architecture
+3. Troubleshooting
+If terraform apply does not work the first time or completes with an error, please re-run the terraform apply command, this will fix the issue. 
+
+
+4.  Architecture
     Following infrastructure will be deployed:
     ->  S3 bucket
     ->  VPC
@@ -30,10 +34,6 @@ Please refer to the architecture to see what infrastructure is being provisioned
 4.  How to destroy the architecture
 After deploying the infrastructure, the infrastructure can be teared down using the command terraform destroy. 
 Most of the infrastructure will be destroyed, apart from the s3 bucket (will be an error at the end, saying s3 bucket is not empty). S3 bucket needs to be deleted manually. Please navigate and log in to the aws console on the browser of your choice. In the search box, type S3, and click on S3 bucket. Select the Name of s3 bucket (my-bucket-m4a1) and click on empty bucket. Once the bucket is successfully emptied, you can delete the bucket, on the same page of AWS console.  
-
-5. Trouble Shooting
-If terraform apply does not work the first time or completes with an error, please re-run the terraform apply command, this will fix the issue. 
-
 
 6. Improvements 
 There is a lot of room for improvement in the architecture. Given the resources, RDS can be deployed for database high availability. Route 53 can be configured for high availability. If extra control is required EC2 instance of choice can be deployed to host the frontend of the app. Lot of other architectures can be designed depending on the requirements and nature of the app.
