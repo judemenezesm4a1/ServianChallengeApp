@@ -57,6 +57,6 @@ resource "aws_lb_listener" "listener" {
 }
 
 output "alb_dns"{
-  description = "URL of the load balancer"
+  description = "URL of the load balancer, please copy and paste the url in the browser"
   value =  aws_alb.application_load_balancer.dns_name
 }

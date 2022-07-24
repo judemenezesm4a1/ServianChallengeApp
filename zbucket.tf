@@ -23,6 +23,8 @@ resource "aws_s3_bucket" "my_bucket" {
   }
 }
 
+############# THIS CODE NEEDS TO BE UNCOMMENTED ###################
+
 # # Comment the code below to create the s3 bucket, after Terraform
 # # apply is complete, uncomment the code below and do a terraform init,
 # # and tarraform apply again, execuring the code below will deploy 
