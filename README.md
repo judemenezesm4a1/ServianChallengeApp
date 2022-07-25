@@ -7,13 +7,14 @@ Type aws in the terminal you are using to check if installation is successful, i
 Need Terraform installed on the testing system please follow the link (https://www.terraform.io/downloads) for installation. To check if terraform is properly installed type Terraform -version in your terminal. 
 
 2.  How to run the terraform file
-Please clone the repository in code editor of your choice. I have tested and written the code on Visual Studio Code. 
+Please clone/download the repository in code editor of your choice. I have tested and written the code on Visual Studio Code. 
 Once the clone is complete, type terraform init to initialize the code. Once terraform init is successful type terraform plan, this will prompt you for the password for the database, please enter the database credentials.  After terraform plan is complete type terraform apply, this will again prompt for the database password, please enter the same credentials entered previously. Please type yes to proceed with the deployment. 
 After the deployment is complete, please open zbucket.tf file and uncomment the code section at the bottom and please repeat the above steps. This is to provision the terraform.tfstate file on the S3 bucket, I couldn’t find a better way of provisioning tfstate file to S3. The code will still execute successfully without uncommenting the zbucket code block, but the if there is a need to store .tfstate files in a remote location for security purposes, please consider executing the code.  
 Please refer to the architecture to see what infrastructure is being provisioned. 
 
 3. Troubleshooting
 If terraform apply does not work the first time or completes with an error, please re-run the terraform apply command, this will fix the issue. 
+Please refresh the browser after a couple of minutes after putting the loadbalancer dns in the browser, if you still get 503 error please refresh the page. The loadbalancer takes a while to become live. 
 
 
 4.  Architecture
