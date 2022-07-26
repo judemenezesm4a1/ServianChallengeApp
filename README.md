@@ -42,7 +42,7 @@ Please refer to the architecture section to see what infrastructure that is bein
 ## 3.1 Execution error
 If terraform apply does not work the first time or completes with an error, please re-run the terraform apply command, this will fix the issue. 
 
-## 3.2 503 errr
+## 3.2 503 error
 Please put the load balancer dns in the browser after couple minutes, if you still get 503 error please refresh the page. The load balancer takes a while to become live. 
 
 # 4.  Architecture
