@@ -5,12 +5,12 @@ Need an AWS account, please create one using (https://aws.amazon.com/), create a
 
 ## 1.2 Installing AWS CLI
 Need AWS cli installed on the working system please follow this link (https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started) for installation. 
-Step 1:
+## Step 1:
 Type aws in the terminal you are using to check if installation is successful, in my case, I am using windows so command prompt. 
-Step 2:
+## Step 2:
 Once installation is verified, 
 type aws configure and enter the access and the private key generated from AWS. 
-Step 3:
+## Step 3:
 Please put ap-southeast-2 as your region as I have done most of the testing on ap-southeast-2. 
 Reason, customer data will stay on shore and quick response time. 
 
